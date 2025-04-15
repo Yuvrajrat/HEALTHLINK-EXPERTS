@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthLink Experts</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <h1 class="company-name"><i>HealthLink Experts</i></h1>
+    <button class="contact-btn">Contact Us</button>
+</nav>
+
+<section class="split-section">
+    <div class="container">
+        <div class="content-left">
+            <h2>Your Health, Our Priority</h2>
+            <p>
+                We provide comprehensive healthcare solutions tailored to your needs. Our team of expert professionals is dedicated to ensuring your well-being through personalized care and cutting-edge medical services.Your health, prioritized.
+            </p>
+            <button class="find-your-doctor-btn"><i>Find Your Doctor</i></button>
+        </div>
+        <div class="content-right">
+            <img src="section1-doctor-img.jpg" alt="Healthcare Professional">
+        </div>
+    </div>
+
+    <div class="cards-container">
+        <div class="card left-card">
+            <img src="section1-doctor-img-2.jpg" alt="Doctor Connect" class="card-image">
+        </div>
+        <div class="card right-card">
+            <p class="right-card-para-1">Connect Within 2 Mins</p>
+            <h2 class="card-heading">Connect with the Best Doctors</h2>
+            <p class="card-text">
+                Get instant access to licensed doctors anytime, anywhere healthcare made simple and convenient! Book your online consultation today and feel better, faster
+            </p>
+        <button class="video-consultation-btn learn-more-btn" onclick="location.href='video-consultation.html'"><i>Video Consultation</i></button>
+        </div>
+    </div>
+
+</section>
+
+<section>
+    
+</section>
+
+
+<!-- section 2 starts  -->
+
+<section class="three-column-section">
+    <div class="three-column-container">
+        <div class="column">
+            <h2>Personalized Doctor Recommendations</h2>
+            <p>
+                Get matched with expert doctors tailored to your health needs in India.
+            </p>
+        </div>
+        <div class="column">
+            <h2>Comprehensive Health Profiles</h2>
+            <p>
+                Access detailed profiles of doctors, including specialties and patient reviews.
+            </p>
+        </div>
+        <div class="column">
+            <h2>Scheduled Appointment Booking</h2>
+            <p>
+                Easily book appointments at your convenience with trusted local doctors.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- help center section  -->
+
+<section>
+    <nav class="navbar">
+        <h1 class="company-name"><i>HealthLink Experts</i></h1>
+        <button class="contact-btn">Contact Us</button>
+    </nav>
+
+    <div class="help-center">
+        <h1><b>Help Center</b></h1>
+        
+        <div class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    How do I book an appointment with a doctor?
+                    <span class="toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    You can book an appointment by visiting our doctors page, selecting your preferred doctor, and clicking the "Book Appointment" button. Follow the prompts to schedule your visit.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    What insurance plans do you accept?
+                    <span class="toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    We accept most major insurance plans. Please contact our office directly to verify your specific insurance coverage.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    How can I access my medical records?
+                    <span class="toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    You can request your medical records through our patient portal or by contacting our medical records department directly.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    What should I bring to my first appointment?
+                    <span class="toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Please bring your government-issued ID, insurance card, list of current medications, and any relevant medical records or test results.
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <h2>Still Have Questions?</h2>
+            <p>Please fill out the form below and we'll get back to you as soon as possible.</p>
+            
+            <form id="helpForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="problem">Describe your problem:</label>
+                    <textarea id="problem" rows="5" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <section>
+        
+    </section>
+    <script>
+        // Toggle FAQ answers
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                faqItem.classList.toggle('active');
+                const toggle = question.querySelector('.toggle');
+                toggle.textContent = faqItem.classList.contains('active') ? '-' : '+';
+            });
+        });
+
+        // Handle form submission
+        document.getElementById('helpForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your message. We will get back to you soon!');
+            e.target.reset();
+        });
+    </script>
+</section>
+<script src="script.js"></script>
+</body>
+</html>

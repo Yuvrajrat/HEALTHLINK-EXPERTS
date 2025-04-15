@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Your Doctor - HealthLink Experts</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .doctors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .doctor-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .doctor-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .doctor-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+        
+        .doctor-specialty {
+            color: #666;
+            font-style: italic;
+            margin: 0.5rem 0;
+        }
+        
+        .Check-Out-Everyone-btn {
+            background: linear-gradient(45deg, #1a2a36, #2c4356);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <h1 class="company-name"><i>HealthLink Experts</i></h1>
+        <button class="contact-btn">Contact Us</button>
+    </nav>
+
+    <div style="margin-top: 100px; text-align: center;">
+        <h2>Find the Perfect Doctor for Your Needs Today!</h2>
+        <p>Connect with top-tier healthcare professionals, carefully selected to provide exceptional care and expertise.</p>
+    </div>
+
+
+    <div class="doctors-grid">
+        <div class="doctor-card">
+            <img src="Cardiologist.jpg" alt="Dr. Ashok Seth" class="doctor-image">
+            <h3>Cardiologist</h3>
+            <p class="doctor-specialty">Cardiologist</p>
+            <p>Experience heart care that puts your health first, with expert cardiologists dedicated to your well-being</p>
+            <button class="Check-Out-Everyone-btn">Check Out Everyone</button>
+        </div>
+
+        <div class="doctor-card">
+            <img src="neurologist.webp" alt="Dr. Deepu Banerji" class="doctor-image">
+            <h3>Neurologist</h3>
+            <p class="doctor-specialty">Neurologist</p>
+            <p>Trust our expert neurologists to provide personalized care and advanced treatments for a healthier, more vibrant life</p>
+            <button class="Check-Out-Everyone-btn">Check Out Everyone</button>
+        </div>
+
+        <div class="doctor-card">
+            <img src="Pediatrician.jpg" alt="Dr. Tushar Gupta" class="doctor-image">
+            <h3>Pediatrician</h3>
+            <p class="doctor-specialty">Pediatrician</p>
+            <p>Compassionate care for your little ones, with expert pediatricians dedicated to your child's health and well-being</p>
+            <button class="Check-Out-Everyone-btn">Check Out Everyone</button>
+        </div>
+
+        <div class="doctor-card">
+            <img src="oncologist.png" alt="Dr. Tushar Gupta" class="doctor-image">
+            <h3>oncologist</h3>
+            <p class="doctor-specialty">oncologist</p>
+            <p>Specialized in child healthcare with 26+ years of experience</p>
+            <button class="Check-Out-Everyone-btn">Check Out Everyone</button>
+        </div>
+
+        <div class="doctor-card">
+            <img src="gynecologist.png" alt="Dr. Tushar Gupta" class="doctor-image">
+            <h3>gynecologist</h3>
+            <p class="doctor-specialty">gynecologist</p>
+            <p>Specialized in child healthcare with 26+ years of experience</p>
+            <button class="Check-Out-Everyone-btn">Check Out Everyone</button>
+        </div>
+
+        <div class="doctor-card">
+            <img src="psychiatrists.png" alt="Dr. Tushar Gupta" class="doctor-image">
+            <h3>Psychiatrists</h3>
+            <p class="doctor-specialty">Psychiatrists</p>
+            <p>Specialized in child healthcare with 26+ years of experience</p>
+            <button class="Check-Out-Everyone-btn">Check Out Everyone</button>
+        </div>
+    </div>
+
+    </style>
+    </section>
+
+
+
+
+
+    <script> 
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const doctorCards = document.querySelectorAll('.doctor-card');
+        doctorCards.forEach(card => {
+            const specialty = card.querySelector('.doctor-specialty').textContent.toLowerCase();
+            const button = card.querySelector('.Check-Out-Everyone-btn');
+            button.addEventListener('click', function() {
+                window.location.href = `${specialty}.html`;
+            });
+        });
+    });
+    </script>
+</body>
+</html>
